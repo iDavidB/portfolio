@@ -8,20 +8,31 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
+  * {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    height: 100vh;
   }
 
-  * {
-    background: #17181a;
-    font-family: "Monsterrat", sans-serif;
+  html,
+  body {
     overflow-x: hidden;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+  }
+
+  a {
+    color: #fff;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+  }
+
+  body {
+    background-color: #17181a;
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
   }
 `;
 

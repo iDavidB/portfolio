@@ -1,5 +1,6 @@
 import React, { FC, Fragment } from "react";
 import styled from "styled-components";
+import { AbsoluteWrapper } from "./Constants/AbsoluteWrapper";
 
 const StyledImgDiv = styled.div`
   position: relative;
@@ -55,21 +56,23 @@ const StyledA = styled.a`
 `;
 
 export const Test: FC = () => (
-  <Fragment>
-    <StyledImgDiv>
-      <StyledImg src="" alt="Test" />
-    </StyledImgDiv>
-    <StyledDescDiv>
-      <div className="title">
-        <StyledH2>
-          Freedom at your <StyledSpan>fingertips</StyledSpan>
-        </StyledH2>
-      </div>
-      <StyledP>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </StyledP>
-      <StyledA>Explore</StyledA>
-    </StyledDescDiv>
-  </Fragment>
+  <AbsoluteWrapper>
+    <Fragment>
+      <StyledImgDiv>
+        <StyledImg src="" alt="Test" />
+      </StyledImgDiv>
+      <StyledDescDiv>
+        <div className="title">
+          <StyledH2>
+            Freedom at your <StyledSpan>fingertips</StyledSpan>
+          </StyledH2>
+        </div>
+        <StyledP>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </StyledP>
+        <StyledA>Explore</StyledA>
+      </StyledDescDiv>
+    </Fragment>
+  </AbsoluteWrapper>
 );

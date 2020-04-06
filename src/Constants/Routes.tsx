@@ -2,9 +2,8 @@ import React, { FC, Fragment } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
 
-import { Home } from "../Home/Home";
 import { Test } from "../Test";
-import { Section } from "../Shared/Section";
+import { Home } from "../Home/Home";
 
 export const Routes: FC = () => {
   const location = useLocation();
@@ -19,10 +18,8 @@ export const Routes: FC = () => {
       {transitions.map(({ item, props, key }) => (
         <animated.div key={key} style={props}>
           <Switch location={item}>
-            <Section>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/test" component={Test} />
-            </Section>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/test" component={Test} />
           </Switch>
         </animated.div>
       ))}
