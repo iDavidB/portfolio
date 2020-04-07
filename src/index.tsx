@@ -17,7 +17,9 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    overflow: hidden;
+    @media screen and (min-width: 767px) {
+      overflow: hidden;
+    }
   }
 
   a {

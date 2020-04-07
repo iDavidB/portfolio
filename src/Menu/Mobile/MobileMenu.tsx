@@ -50,6 +50,9 @@ export const MobileMenu: FC = () => {
     clipPath: open
       ? "circle(1250px at 100% -10%)"
       : "circle(50px at 100% -10%)",
+    WebkitClipPath: open
+      ? "circle(1250px at 100% -10%)"
+      : "circle(50px at 100% -10%)",
     config: config.slow,
   });
 
