@@ -8,7 +8,8 @@ const StyledNavLink = styled(NavLink)`
   font-family: "Abril Fatface";
   font-weight: bold;
 
-  &:hover {
+  &:hover,
+  &.active {
     color: rgb(255, 139, 93);
     text-decoration: none;
   }
@@ -34,17 +35,17 @@ const StyledNavLink = styled(NavLink)`
 export const MenuItems: FC = () => (
   <ul className="navbar-nav">
     <li className="nav-item">
-      <StyledNavLink className="nav-link" to="/">
+      <StyledNavLink exact activeClassName="active" className="nav-link" to="/">
         Home
       </StyledNavLink>
     </li>
     <li className="nav-item">
-      <StyledNavLink className="nav-link" to="/test">
+      <StyledNavLink activeClassName="active" className="nav-link" to="/test">
         Skills
       </StyledNavLink>
     </li>
     <li className="nav-item">
-      <StyledNavLink className="nav-link" to="/test">
+      <StyledNavLink activeClassName="active" className="nav-link" to="/poo">
         Experience
       </StyledNavLink>
     </li>
