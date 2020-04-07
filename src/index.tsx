@@ -6,6 +6,7 @@ import { createGlobalStyle } from "styled-components";
 import { BrowserRouter } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import { MenuContextProvider } from "./Context/MenuContext";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -39,8 +40,10 @@ const GlobalStyle = createGlobalStyle`
 ReactDOM.render(
   <StrictMode>
     <BrowserRouter>
-      <GlobalStyle />
-      <App />
+      <MenuContextProvider>
+        <GlobalStyle />
+        <App />
+      </MenuContextProvider>
     </BrowserRouter>
   </StrictMode>,
   document.getElementById("root")
